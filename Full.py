@@ -13,36 +13,43 @@ if v == "1." or v == "1" or v == "Klasická kalkulačka" or v == "Klasicka kalku
     y = (int(y))
 
 #Sčítání
-    if z == "Sčítání" or "1." or "1. Sčítání" or "1" or "scitani":
-        m = (x + y)
+    if z == "Sčítání" or z == "1." or z == "1. Sčítání" or z == "1" or z == "scitani":
+        m = x
+        m += y
         m = (str(m))
         print("Výsledek je " + m)
 #Odečítání
-    elif z == "Odečítání" or "2." or "2. Odečítání" or "2" or "odecitani":
-        m = (x - y)
+    elif z == "Odečítání" or z == "2." or z == "2. Odečítání" or z == "2" or z == "odecitani":
+        m = x
+        m -= y
         m = (str(m))
         print("Výsledek je " + m)
 #Násobení
-    elif z == "Násobení" or "3." or "3. Násobení" or "3" or "nasobeni":
-        m = (x * y)
+    elif z == "Násobení" or z == "3." or z == "3. Násobení" or z == "3" or z == "nasobeni":
+        m = x
+        m *= y
         m = (str(m))
         print("Výsledek je " + m)
 #Dělení
-    elif z == "Dělení" or "4." or "4. Dělení" or "4" or "deleni":
+    elif z == "Dělení" or z == "4." or z == "4. Dělení" or z == "4" or z == "deleni":
         if y == 0:
             print("y nesmí být 0")
         else:
-            m = (x / y)
+            m = x
+            m /= y
             m = (str(m))
             print("Výsledek je" + m)
 #Mocnina
-    elif z == "Mocnina" or "5." or "5. Mocnina" or "5" or "mocnina":
-        m = (x ** y)
+    elif z == "Mocnina" or z == "5." or z == "5. Mocnina" or z == "5" or z == "mocnina":
+        m = x
+        m **= y
         m = (str(m))
         print("Výsledek je " + m)
 #Odmocnina
-    elif z == "Odmocnina" or "6." or "6. Odmocnina" or "6" or "odmocnina":
-        m = (x * 1 / y)
+    elif z == "Odmocnina" or z == "6." or z == "6. Odmocnina" or z == "6" or z == "odmocnina":
+        m = x
+        m *= 1
+        m /= y
         m = (str(m))
         print("Výsledek je " + m)
 
@@ -58,7 +65,8 @@ elif v == "2." or v == "2" or v == "Kalkulačka na výpočet obsahu..." or v == 
         a = int(a)
 
         if a>0:
-            v = (3.14 * a**2)
+            v = 3.14
+            v *= a**2
             v = str(v)
             c = print("Výsledek je " + v)
         else:
@@ -74,7 +82,8 @@ elif v == "2." or v == "2" or v == "Kalkulačka na výpočet obsahu..." or v == 
         b = int(b)
 
         if a>0 and b>0:
-            v = (a * b)
+            v = a
+            v *= b
             v = str(v)
             c = print("Výsledek je " + v)
         else:
@@ -106,7 +115,9 @@ elif v == "2." or v == "2" or v == "Kalkulačka na výpočet obsahu..." or v == 
         c = int(c)
 
         if a and b and c>0:
-            v = (a * b * c)
+            v = a
+            v *= b
+            v *= c
             v = str(v)
             c = print("Výsledek je " + v)
         else:
