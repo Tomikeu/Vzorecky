@@ -1,7 +1,25 @@
-#Přivítaní 
-print("Vítejte v aplikaci pro výpočty.")
+#Animace
+import os 
+import sys
 
-v = input("1. Klasická kalkulačka\n2. Kalkulačka na výpočet obsahu...")
+def console_frame(output):
+	os.system('clear' if os.name == 'posix' else 'CLS')
+	sys.stdout.write(output + "\n")
+	sys.stdout.flush()
+
+import time
+import math
+
+for t in range(50):
+	console_frame("\n".join(["*" * (30 + int(30 * math.sin(.1 * x + .1 * t))) for x in range(30)])) # time-varying sine wave
+	time.sleep(.04)
+
+
+#Přivítaní 
+print("--------------------------------")
+print("Vítejte v aplikaci pro výpočty.")
+print("--------------------------------")
+v = input("1. Klasická kalkulačka\n2. Kalkulačka na výpočet obsahu...\n- ")
 
 #Kalkulačka
 if v == "1." or v == "1" or v == "Klasická kalkulačka" or v == "Klasicka kalkulacka":
